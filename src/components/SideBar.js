@@ -3,7 +3,7 @@ import { Link, Route, Switch } from 'react-router-dom';
 
 import ContentWrapper from './ContentWrapper';
 import TopBar from './TopBar';
-import SearchProducts from './SearchProducts';
+// import SearchProducts from './SearchProducts';
 import ContentRowProducts from './ContentRowProducts';
 import LastProductInDb from './LastProductInDb';
 import CategoriesInDb from './CategoriesInDb';
@@ -44,12 +44,12 @@ function SideBar(){
                 <div className="sidebar-heading">Actions</div>
 
                 {/*<!-- Nav Item - Search -->*/}
-                <li className="nav-item">
+                {/* <li className="nav-item">
                     <Link className="nav-link collapsed" to="/search">
                         <i className="fas fa-search"></i>
                         <span>Buscar productos</span>
                     </Link>
-                </li>
+                </li> */}
 
                 {/*<!-- Nav Item - ContentRowProducts -->*/}
                 <li className="nav-item">
@@ -114,26 +114,26 @@ function SideBar(){
                 <Route exact path="/">
                     <ContentWrapper />
                 </Route>
-                <Route path="/search">
+                {/* <Route path="/search">
                     <div id="content-wrapper" className="d-flex flex-column">
                         <div id="content">
                             <TopBar />
                             <div className="container-fluid">
                                 <div className="d-sm-flex aligns-items-center justify-content-between mb-4">
-                                    <h1 className="h3 mb-0 text-gray-800">App Dashboard</h1>
+                                    <h1 className="h3 mb-0 text-gray-800">Veoverde Dashboard</h1>
                                 </div>
                                 <SearchProducts />
                             </div>
                         </div>
                     </div>    
-                </Route>
+                </Route> */}
                 <Route path="/summary">
                     <div id="content-wrapper" className="d-flex flex-column">
                         <div id="content">
                             <TopBar />
                             <div className="container-fluid">
                                 <div className="d-sm-flex aligns-items-center justify-content-between mb-4">
-                                    <h1 className="h3 mb-0 text-gray-800">App Dashboard</h1>
+                                    <h1 className="h3 mb-0 text-gray-800">Veoverde Dashboard</h1>
                                 </div>
                                 <ContentRowProducts />
                             </div>
@@ -146,7 +146,7 @@ function SideBar(){
                             <TopBar />
                             <div className="container-fluid">
                                 <div className="d-sm-flex aligns-items-center justify-content-between mb-4">
-                                    <h1 className="h3 mb-0 text-gray-800">App Dashboard</h1>
+                                    <h1 className="h3 mb-0 text-gray-800">Veoverde Dashboard</h1>
                                 </div>
                                 <div className="row">
                                     <LastProductInDb />
@@ -161,7 +161,7 @@ function SideBar(){
                             <TopBar />
                             <div className="container-fluid">
                                 <div className="d-sm-flex aligns-items-center justify-content-between mb-4">
-                                    <h1 className="h3 mb-0 text-gray-800">App Dashboard</h1>
+                                    <h1 className="h3 mb-0 text-gray-800">Veoverde Dashboard</h1>
                                 </div>
                                 <div className="row">
                                     <CategoriesInDb />
@@ -176,7 +176,7 @@ function SideBar(){
                             <TopBar />
                             <div className="container-fluid">
                                 <div className="d-sm-flex aligns-items-center justify-content-between mb-4">
-                                    <h1 className="h3 mb-0 text-gray-800">App Dashboard</h1>
+                                    <h1 className="h3 mb-0 text-gray-800">Veoverde Dashboard</h1>
                                 </div>
                                 <Chart />
                             </div>                            

@@ -36,25 +36,25 @@ function ContentRowProducts(){
         title: 'Productos en DB',
         color: 'primary', 
         quantity: products.length,
-        icon: 'fa-clipboard-list'
+        icon: 'fas fa-tree'
     }
 
     /* <!-- Total awards --> */
 
     let usersInDb = {
-        title:'Users en DB', 
+        title:'Usuarios en DB', 
         color:'success', 
         quantity: users.length,
-        icon:'fa-award'
+        icon:'fas fa-users'
     }
 
     /* <!-- Actors quantity --> */
 
     let categoriesInDB = {
-        title: 'Categories in DB' ,
+        title: 'Categorias rn DB' ,
         color: 'warning',
         quantity: categories,
-        icon: 'fa-user-check'
+        icon: 'fab fa-pagelines'
     }
 
     let cartProps = [productsInDB, usersInDb, categoriesInDB];

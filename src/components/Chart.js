@@ -1,54 +1,37 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import ChartRow from './ChartRow';
 
-let tableRowsData = [
-    {
-        Title: 'Billy Elliot ',
-        Length: '123',
-        Rating: '5',
-        Categories: ['Drama','Comedia'],
-        Awards: 2
-    },
-    {
-        Title: 'Alicia en el país de las maravillas',
-        Length: '142',
-        Rating: '4.8',
-        Categories: ['Drama','Acción','Comedia'],
-        Awards: 3
-    },
-    
-]
-
-
 function Chart (){
+
+    const [ productsInDB , setProductsInDB ] = useState([]);
+    
+    useEffect(() => {
+        fetch("https://veoverde.herokuapp.com/api/products")
+            .then(response => response.json())
+            .then(data => {
+                setProductsInDB(data.products);
+            })
+    },[]);
+
     return (
         /* <!-- DataTales Example --> */
         <div className="card shadow mb-4">
             <div className="card-body">
                 <div className="table-responsive">
-                    <table className="table table-bordered" id="dataTable" width="100%" cellSpacing="0">
+                    <h5 className="mb-10 font-weight-bold text-gray-800">Lista de Productos en DB</h5>
+                    <table className="table table-bordered" id="dataTable" width="100%" cellSpacing="0">                        
                         <thead>
                             <tr>
-                                <th>Título</th>
-                                <th>Duración</th>
-                                <th>Rating</th>
-                                <th>Género</th>
-                                <th>Premios</th>
+                                <th>ID</th>
+                                <th>NOMBRE</th>
+                                <th>PRECIO</th>
+                                <th>CATEGORIA</th>
                             </tr>
                         </thead>
-                        <tfoot>
-                            <tr>
-                                <th>Título</th>
-                                <th>Duración</th>
-                                <th>Rating</th>
-                                <th>Género</th>
-                                <th>Premios</th>
-                            </tr>
-                        </tfoot>
                         <tbody>
                             {
-                            tableRowsData.map( ( row , i) => {
-                                return <ChartRow { ...row} key={i}/>
+                            productsInDB.map( ( product , i) => {
+                                return <ChartRow { ...product} key={i}/>
                             })
                             }
 

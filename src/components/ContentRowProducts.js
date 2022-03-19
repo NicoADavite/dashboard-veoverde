@@ -51,7 +51,7 @@ function ContentRowProducts(){
     /* <!-- Actors quantity --> */
 
     let categoriesInDB = {
-        title: 'Categorias rn DB' ,
+        title: 'Categorias en DB' ,
         color: 'warning',
         quantity: categories,
         icon: 'fab fa-pagelines'

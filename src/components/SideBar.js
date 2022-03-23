@@ -12,7 +12,6 @@ import NotFound from './NotFound';
 
 import image from '../assets/images/veoverde-nombre_Blanco.png';
 
-
 function SideBar(){
     return(
         <React.Fragment>
@@ -35,6 +34,17 @@ function SideBar(){
                         <i className="fas fa-solar-panel"></i>
                         <span>Dashboard - Veoverde</span>
                     </Link>
+                </li>
+
+                {/*<!-- Divider -->*/}
+                <hr className="sidebar-divider"/>
+
+                {/*<!-- Nav Item - Veoverde Web Link -->*/}
+                <li className="nav-item active">
+                    <a className="nav-link" href="https://veoverde.herokuapp.com/">
+                        <i className="fi fi-rr-globe"></i>
+                        <span>Web - Veoverde</span>
+                    </a>
                 </li>
 
                 {/*<!-- Divider -->*/}

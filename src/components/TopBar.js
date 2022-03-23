@@ -1,6 +1,7 @@
 import React from 'react';
 
 import foto from '../assets/images/mickel-jordan.jpg';
+import admin from '../assets/images/admin-image.jpg';
 
 function TopBar(){
     return(
@@ -40,7 +41,7 @@ function TopBar(){
 						<li className="nav-item dropdown no-arrow">
 							<a className="nav-link dropdown-toggle" href="/" id="userDropdown">
 								<span className="mr-2 d-none d-lg-inline text-gray-600 small">Julito Marchelo de la EEENNNEEEBBEEAAAAA</span>
-								<img className="img-profile rounded-circle" src={foto} alt="Mickel Jordan - NBA" width="200"/>
+								<img className="img-profile rounded-circle" src={admin} alt="Mickel Jordan - NBA" width="200"/>
 							</a>
 						</li>
 
